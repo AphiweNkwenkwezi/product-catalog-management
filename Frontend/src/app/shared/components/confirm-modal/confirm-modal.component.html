@@ -1,0 +1,25 @@
+<div class="overlay" (click)="close()">
+
+  <div class="modal" (click)="$event.stopPropagation()">
+
+    <div class="modal-header">
+      <h3>{{ title }}</h3>
+    </div>
+
+    <div class="modal-body">
+      <p>{{ message }}</p>
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn secondary" (click)="close()">
+        {{ cancelText }}
+      </button>
+
+      <button class="btn danger" (click)="confirm()">
+        {{ confirmText }}
+      </button>
+    </div>
+
+  </div>
+
+</div>
